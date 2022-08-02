@@ -85,8 +85,10 @@ public class PruebaEcApplication implements CommandLineRunner{
 		//this.pacienteService.insertar(paciente2);
 		logJava.info("Se ha insertado un doctor: " + paciente2);
 		
-		this.citaMedicaGestorService.insertarCitaMedica("4",LocalDateTime.now() , new BigDecimal(50), doctor.getCedula(), paciente2.getCedula());
+		//this.citaMedicaGestorService.insertarCitaMedica("4",LocalDateTime.now() , new BigDecimal(50), doctor.getCedula(), paciente2.getCedula());
 		logJava.info("Se ha insertado una cita médica");
+		
+		this.citaMedicaGestorService.actualizarCitaMedica("4", "Gripe", "Paracetamol 8 h", LocalDateTime.now());
 	}
 
 }
